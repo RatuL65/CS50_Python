@@ -14,7 +14,7 @@ def diff(birthday):
         year, month, day = birthday.split("-")
         birthday = date(int(year), int(month), int(day))
     except:
-        return sys.exit("Invalid")
+        return sys.exit("Invalid Date")
     difference =  (date.today() - birthday).days * 24 * 60
     result = p.number_to_words(difference, andword="").capitalize()
     print(result + " minutes")
